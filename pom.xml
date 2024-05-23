@@ -37,6 +37,29 @@
                     <target>${java.version}</target>
                 </configuration>
             </plugin>
+
+                 <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>3.1.2</version>
+                <executions>
+                    <execution>
+                        <id>install-github-code</id>
+                        <phase>initialize</phase>
+                        <goals>
+                            <goal>get</goal>
+                        </goals>
+                        <configuration>
+                            <groupId>org.apache.maven.plugins</groupId>
+                            <artifactId>maven-dependency-plugin</artifactId>
+                            <version>3.1.2</version>
+                            <repoUrl>https://github.com/batprogram/gyy-01.git</repoUrl>
+                            <outputDirectory>${project.build.directory}/github-code</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+     
             <!-- Plugin Maven untuk paket distribusi -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
