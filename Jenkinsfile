@@ -45,8 +45,7 @@ pipeline {
             }
             steps {
                 echo 'Deploying to production...'
-                // Menggunakan start untuk menjalankan proses di latar belakang di Windows
-                bat 'start java -jar target/test-project-1.0.0.jar'
+                             bat 'start java -jar target/test-project-1.0.0.jar'
             }
         }
     }
