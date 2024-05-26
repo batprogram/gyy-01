@@ -3,7 +3,7 @@ pipeline {
 
     tools {
         // Tentukan alat yang dibutuhkan
-        'NodeJS 20.13.1' // Sesuaikan dengan nama JDK yang Anda tambahkan di Jenkins
+        nodejs 'NodeJS 20.13.1' // Sesuaikan dengan nama JDK yang Anda tambahkan di Jenkins
     }
 
     environment {
