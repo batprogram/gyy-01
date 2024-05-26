@@ -3,13 +3,13 @@ pipeline {
 
     tools {
         // Tentukan alat yang dibutuhkan
-        jdk 'JDK 21' // Sesuaikan dengan nama JDK yang Anda tambahkan di Jenkins
+        NodeJS // Sesuaikan dengan nama JDK yang Anda tambahkan di Jenkins
     }
 
     environment {
         // Tentukan environment variables jika diperlukan
-        JAVA_HOME = tool 'JDK 21'
-        PATH = "${env.PATH};${JAVA_HOME}\\bin"
+        NODE_HOME = tool name: 'NodeJS', type: 'NodeJSInstallation'
+        PATH = "${env.NODE_HOME}/bin:${env.PATH}"
     }
 
     stages {
